@@ -5,7 +5,6 @@ Steps:
 
 The server used and configured by SorinPy
 https://github.com/SorinPy/Lgd-Server
-Thanks :)
 
 I haven't tested other databases
 

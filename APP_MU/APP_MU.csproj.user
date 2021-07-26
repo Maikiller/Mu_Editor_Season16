@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\Administrator\Admin_Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Administrator\Admin_Characters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Administrator\Admin_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Administrator\NPC_Shop_Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Administrator\Shop_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\IPConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\User\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

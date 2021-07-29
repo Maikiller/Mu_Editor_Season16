@@ -40,9 +40,6 @@ namespace APP_MU.Forms.Administrator
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +50,7 @@ namespace APP_MU.Forms.Administrator
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
@@ -81,13 +79,14 @@ namespace APP_MU.Forms.Administrator
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
@@ -233,48 +232,6 @@ namespace APP_MU.Forms.Administrator
             this.textBox2.Size = new System.Drawing.Size(105, 23);
             this.textBox2.TabIndex = 3;
             // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown4.Location = new System.Drawing.Point(139, 120);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(140, 23);
-            this.numericUpDown4.TabIndex = 12;
-            this.numericUpDown4.ThousandsSeparator = true;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown5.Location = new System.Drawing.Point(139, 72);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(140, 23);
-            this.numericUpDown5.TabIndex = 9;
-            this.numericUpDown5.ThousandsSeparator = true;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown6.Location = new System.Drawing.Point(139, 25);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(140, 23);
-            this.numericUpDown6.TabIndex = 6;
-            this.numericUpDown6.ThousandsSeparator = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -385,6 +342,9 @@ namespace APP_MU.Forms.Administrator
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.numericUpDown2);
             this.panel1.Controls.Add(this.numericUpDown7);
             this.panel1.Controls.Add(this.label2);
@@ -398,16 +358,22 @@ namespace APP_MU.Forms.Administrator
             this.panel1.Controls.Add(this.numericUpDown3);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.numericUpDown4);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.numericUpDown5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.numericUpDown6);
             this.panel1.ForeColor = System.Drawing.SystemColors.Window;
-            this.panel1.Location = new System.Drawing.Point(145, 59);
+            this.panel1.Location = new System.Drawing.Point(145, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(457, 153);
             this.panel1.TabIndex = 28;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(139, 120);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(140, 23);
+            this.textBox5.TabIndex = 40;
             // 
             // textBox1
             // 
@@ -431,7 +397,7 @@ namespace APP_MU.Forms.Administrator
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.numericUpDown17);
             this.panel2.Controls.Add(this.numericUpDown18);
-            this.panel2.Location = new System.Drawing.Point(145, 218);
+            this.panel2.Location = new System.Drawing.Point(145, 250);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(457, 102);
             this.panel2.TabIndex = 29;
@@ -572,7 +538,7 @@ namespace APP_MU.Forms.Administrator
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.Window;
-            this.label14.Location = new System.Drawing.Point(145, 321);
+            this.label14.Location = new System.Drawing.Point(145, 353);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(42, 15);
             this.label14.TabIndex = 26;
@@ -581,7 +547,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown11
             // 
             this.numericUpDown11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown11.Location = new System.Drawing.Point(142, 339);
+            this.numericUpDown11.Location = new System.Drawing.Point(142, 371);
             this.numericUpDown11.Maximum = new decimal(new int[] {
             1215752191,
             23,
@@ -598,7 +564,7 @@ namespace APP_MU.Forms.Administrator
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.SystemColors.Window;
-            this.label15.Location = new System.Drawing.Point(367, 321);
+            this.label15.Location = new System.Drawing.Point(367, 353);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(119, 15);
             this.label15.TabIndex = 30;
@@ -607,7 +573,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown12
             // 
             this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown12.Location = new System.Drawing.Point(367, 339);
+            this.numericUpDown12.Location = new System.Drawing.Point(367, 371);
             this.numericUpDown12.Maximum = new decimal(new int[] {
             1215752191,
             23,
@@ -623,7 +589,7 @@ namespace APP_MU.Forms.Administrator
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.SystemColors.Window;
-            this.label16.Location = new System.Drawing.Point(486, 321);
+            this.label16.Location = new System.Drawing.Point(486, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(119, 15);
             this.label16.TabIndex = 32;
@@ -637,7 +603,7 @@ namespace APP_MU.Forms.Administrator
             this.label_off.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_off.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_off.ForeColor = System.Drawing.Color.Red;
-            this.label_off.Location = new System.Drawing.Point(457, 16);
+            this.label_off.Location = new System.Drawing.Point(457, 48);
             this.label_off.Name = "label_off";
             this.label_off.Size = new System.Drawing.Size(145, 39);
             this.label_off.TabIndex = 34;
@@ -671,7 +637,7 @@ namespace APP_MU.Forms.Administrator
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.SystemColors.Window;
-            this.label21.Location = new System.Drawing.Point(253, 321);
+            this.label21.Location = new System.Drawing.Point(253, 353);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(98, 15);
             this.label21.TabIndex = 37;
@@ -680,7 +646,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown16
             // 
             this.numericUpDown16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown16.Location = new System.Drawing.Point(253, 339);
+            this.numericUpDown16.Location = new System.Drawing.Point(253, 371);
             this.numericUpDown16.Maximum = new decimal(new int[] {
             1215752191,
             23,
@@ -693,7 +659,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown15
             // 
             this.numericUpDown15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown15.Location = new System.Drawing.Point(486, 339);
+            this.numericUpDown15.Location = new System.Drawing.Point(486, 371);
             this.numericUpDown15.Maximum = new decimal(new int[] {
             1215752191,
             23,
@@ -711,7 +677,7 @@ namespace APP_MU.Forms.Administrator
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(516, 529);
+            this.button1.Location = new System.Drawing.Point(508, 578);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 34);
             this.button1.TabIndex = 27;
@@ -726,7 +692,7 @@ namespace APP_MU.Forms.Administrator
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 411);
+            this.checkedListBox1.Location = new System.Drawing.Point(4, 460);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(590, 112);
@@ -739,7 +705,7 @@ namespace APP_MU.Forms.Administrator
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(186, 389);
+            this.checkBox1.Location = new System.Drawing.Point(178, 438);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(89, 19);
             this.checkBox1.TabIndex = 24;
@@ -753,7 +719,7 @@ namespace APP_MU.Forms.Administrator
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox2.ForeColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(12, 389);
+            this.checkBox2.Location = new System.Drawing.Point(4, 438);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(89, 19);
             this.checkBox2.TabIndex = 23;
@@ -769,7 +735,7 @@ namespace APP_MU.Forms.Administrator
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(12, 529);
+            this.button2.Location = new System.Drawing.Point(4, 578);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 34);
             this.button2.TabIndex = 26;
@@ -777,12 +743,55 @@ namespace APP_MU.Forms.Administrator
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(145, 59);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(150, 23);
+            this.textBox4.TabIndex = 38;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(301, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 23);
+            this.comboBox1.TabIndex = 39;
+            this.comboBox1.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed_1);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.Location = new System.Drawing.Point(139, 69);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(140, 23);
+            this.textBox6.TabIndex = 41;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox7.Location = new System.Drawing.Point(139, 24);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(140, 23);
+            this.textBox7.TabIndex = 42;
+            // 
             // Admin_Characters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(613, 571);
+            this.ClientSize = new System.Drawing.Size(708, 620);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -816,9 +825,6 @@ namespace APP_MU.Forms.Administrator
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
@@ -852,9 +858,6 @@ namespace APP_MU.Forms.Administrator
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -893,5 +896,10 @@ namespace APP_MU.Forms.Administrator
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }

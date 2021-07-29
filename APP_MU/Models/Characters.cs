@@ -32,5 +32,6 @@ namespace APP_MU.Models
         public static int dec_fruit_points;
         public static int admin_flags;
         public static int authority;
+        public static int race;
     }
 }

@@ -131,7 +131,8 @@ namespace APP_MU.Models
             "character_info.add_fruit_points," +
             "character_info.dec_fruit_points," +
             "character_info.admin_flags, " +
-            "character_info.authority " +
+            "character_info.authority," +
+            "character_info.race " +
             "FROM character_info " +
             "WHERE " +
             "character_info.guid = '" + Characters.guid + "'";
@@ -160,7 +161,8 @@ namespace APP_MU.Models
                "add_fruit_points = " + Characters.add_fruit_points + "," +
                "dec_fruit_points = " + Characters.dec_fruit_points + "," +
                "admin_flags = " + Characters.admin_flags + "," +
-               "authority = " + Characters.authority + " " +
+               "authority = " + Characters.authority + "," +
+               "race = " + Characters.race + " " +
             "WHERE guid = '" + Characters.guid + "'";
 
         //ITEMS

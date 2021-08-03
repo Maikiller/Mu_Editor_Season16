@@ -36,14 +36,20 @@ namespace APP_MU.Forms.Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Account.account = textBox1.Text;
-            Account.password = ComputeSha256Hash(textBox1.Text + ":" + textBox2.Text);
-            Account.email = textBox3.Text;
-            Sql_Querys sql_Querys = new();
-            Connect.update(sql_Querys.save_user);
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+                MessageBox.Show("Enter Login and Password");
+            else
+            {
+                Account.account = textBox1.Text;
+                Account.password = ComputeSha256Hash(textBox1.Text + ":" + textBox2.Text);
+                Account.email = textBox3.Text;
+                Sql_Querys sql_Querys = new();
+                Connect.update(sql_Querys.save_user);
 
-            MessageBox.Show("Account: " + Account.account + " Created");
-            this.Close();
+                MessageBox.Show("Account: " + Account.account + " Created");
+                this.Close();
+            }
+
         }
     }
 }

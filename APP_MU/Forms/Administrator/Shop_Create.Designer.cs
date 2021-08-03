@@ -80,6 +80,8 @@ namespace APP_MU.Forms.Administrator
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -683,6 +685,28 @@ namespace APP_MU.Forms.Administrator
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Spawn";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.SystemColors.Window;
+            this.label21.Location = new System.Drawing.Point(617, 538);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(77, 15);
+            this.label21.TabIndex = 63;
+            this.label21.Text = "Find Model";
+            this.label21.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(594, 556);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(109, 23);
+            this.textBox4.TabIndex = 62;
+            this.textBox4.Visible = false;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
             // Shop_Create
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -690,6 +714,8 @@ namespace APP_MU.Forms.Administrator
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(766, 701);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.numericUpDown13);
             this.Controls.Add(this.button4);
@@ -803,5 +829,7 @@ namespace APP_MU.Forms.Administrator
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

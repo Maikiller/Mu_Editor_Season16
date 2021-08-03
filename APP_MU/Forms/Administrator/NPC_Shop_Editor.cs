@@ -41,12 +41,25 @@ namespace APP_MU.Forms.Administrator
         public void LoadNpcItems()
         {
             Sql_Querys sql_Querys1 = new();
-            dataGridView1.DataSource = Connect.loadData(sql_Querys1.select_npc_shop_items).DefaultView.ToTable(true, "Item_Name", "Position_Bag", "durability", "guid");
-            if (Connect.loadData(sql_Querys1.select_npc_shop_items).Rows.Count > 0)
+
+            try
             {
-                NpcShop.durability_quanty = int.Parse(Connect.loadData(sql_Querys1.select_npc_shop_items).Rows[0].ItemArray[2].ToString());
+
+
+                dataGridView1.DataSource = Connect.loadData(sql_Querys1.select_npc_shop_items).DefaultView.ToTable(true, "Item_Name", "Position_Bag", "durability", "guid");
+                if (Connect.loadData(sql_Querys1.select_npc_shop_items).Rows.Count > 0)
+                {
+                    NpcShop.durability_quanty = int.Parse(Connect.loadData(sql_Querys1.select_npc_shop_items).Rows[0].ItemArray[2].ToString());
+                }
+                textBox1.Text = comboBox1.Text;
             }
-            textBox1.Text = comboBox1.Text;
+            catch
+            {
+                MessageBox.Show("Add column [guid] auto-increment in mu_game.column");
+            }
+
+
+
         }
 
         public void LoadItemDetail()

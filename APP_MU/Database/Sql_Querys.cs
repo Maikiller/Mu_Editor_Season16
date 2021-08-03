@@ -405,5 +405,70 @@ namespace APP_MU.Models
             "max_pk_level =  " + NpcShop.pk_count + "  " +
             "where  " +
             "name = '" + NpcShop.npc_name + "';";
+
+        public string load_server_settings =
+            "SELECT settings.`key`,settings.value " +
+            "FROM " +
+            "settings " +
+            "WHERE " +
+            "settings.server_id = " + ServerSettings.server_id + "";
+
+        public string update_server_settings =
+            "UPDATE " +
+            "settings " +
+            "SET " +
+            "value = '" + ServerSettings.value + "' " +
+            "WHERE " +
+            "`key` = '" + ServerSettings.key + "' " +
+            "AND " +
+            "server_id = " + ServerSettings.server_id + "";
+
+        public string load_all_events =
+            "SELECT * FROM event_manager WHERE event_manager.server = " + ManageEvents.ServerID + "";
+
+        public string load_event_id =
+            "SELECT " +
+            "event_manager.guid," +
+            "event_manager.server," +
+            "event_manager.event," +
+            "event_manager.invasion," +
+            "event_manager.duration," +
+            "event_manager.notify_time," +
+            "event_manager.hour," +
+            "event_manager.minute," +
+            "event_manager.day_of_week," +
+            "event_manager.day_of_month," +
+            "event_manager.season_event," +
+            "event_manager.exclusive_server " +
+            "FROM " +
+            "event_manager " +
+            "WHERE " +
+            "event_manager.guid = " + ManageEvents.guid + "";
+
+        public string update_event =
+            "UPDATE event_manager SET " +
+            "event = " + ManageEvents.eventID + "," +
+            "invasion = " + ManageEvents.invasionID + "," +
+            "duration = " + ManageEvents.duration + "," +
+            "notify_time = " + ManageEvents.notify_time + "," +
+            "hour = " + ManageEvents.hour + "," +
+            "minute = " + ManageEvents.minute + "," +
+            "day_of_week = " + ManageEvents.day_of_week + "," +
+            "day_of_month = " + ManageEvents.day_of_month + "," +
+            "season_event = " + ManageEvents.season_event + "," +
+            "exclusive_server = " + ManageEvents.exclusive_server + " " +
+            "WHERE guid = " + ManageEvents.guid + "";
+
+        public string delete_event =
+            "DELETE " +
+            "FROM " +
+            "event_manager " +
+            "WHERE " +
+            "guid = " + ManageEvents.guid + "";
+
+        public string add_event =
+            "INSERT INTO event_manager " +
+            "(server, event, invasion, duration, notify_time, hour, minute, day_of_week, day_of_month, season_event, exclusive_server)" +
+            "VALUES(" + ManageEvents.ServerID + ", " + ManageEvents.eventID + ", " + ManageEvents.invasionID + ", " + ManageEvents.duration + ", " + ManageEvents.notify_time + ", " + ManageEvents.hour + ", " + ManageEvents.minute + ", " + ManageEvents.day_of_week + ", " + ManageEvents.day_of_month + ", " + ManageEvents.season_event + ", " + ManageEvents.exclusive_server + ")";
     }
 }

@@ -119,23 +119,37 @@ namespace APP_MU.Forms.Administrator
         {
             InsertInputs();
 
+
             Sql_Querys sql_Querys = new();
-            if (Connect.loadData(sql_Querys.verifierID).Rows.Count > 0)
+
+            if (Connect.loadData(sql_Querys.load_custom_npc).Rows.Count > 0)
             {
-                if (Connect.loadData(sql_Querys.verifierID).Rows[0].ItemArray[0].ToString() == NpcShop.id.ToString())
-                    MessageBox.Show("This ID_Monster " + NpcShop.id + " is already in use. Recommended ID: 11000K upwards;");
-            }
-            else if (Connect.loadData(sql_Querys.verifierIDShop).Rows.Count > 0)
-            {
-                if (Connect.loadData(sql_Querys.verifierIDShop).Rows[0].ItemArray[0].ToString() == NpcShop.guidCustomNPC.ToString())
-                    MessageBox.Show("This ID_SHOP " + NpcShop.guidCustomNPC + " is already in use. Recommended ID: 240K upwards;");
+
+
+                if (Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[15].ToString() == textBox8.Text)
+                {
+                    MessageBox.Show(textBox8.Text + " already exists");
+                }
             }
             else
             {
-                Connect.update(sql_Querys.insertNPC);
-                Connect.update(sql_Querys.insertShop);
-                MessageBox.Show("NPC Custom Create");
-                dataGridView1.DataSource = Connect.loadData(sql_Querys.select_npc);
+                if (Connect.loadData(sql_Querys.verifierID).Rows.Count > 0)
+                {
+                    if (Connect.loadData(sql_Querys.verifierID).Rows[0].ItemArray[0].ToString() == NpcShop.id.ToString())
+                        MessageBox.Show("This ID_Monster " + NpcShop.id + " is already in use. Recommended ID: 11000K upwards;");
+                }
+                else if (Connect.loadData(sql_Querys.verifierIDShop).Rows.Count > 0)
+                {
+                    if (Connect.loadData(sql_Querys.verifierIDShop).Rows[0].ItemArray[0].ToString() == NpcShop.guidCustomNPC.ToString())
+                        MessageBox.Show("This ID_SHOP " + NpcShop.guidCustomNPC + " is already in use. Recommended ID: 240K upwards;");
+                }
+                else
+                {
+                    Connect.update(sql_Querys.insertNPC);
+                    Connect.update(sql_Querys.insertShop);
+                    MessageBox.Show("NPC Custom Create");
+                    dataGridView1.DataSource = Connect.loadData(sql_Querys.select_npc);
+                }
             }
         }
 
@@ -237,6 +251,21 @@ namespace APP_MU.Forms.Administrator
         private void button4_Click(object sender, EventArgs e)
         {
             ClearInputs();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            String searchValue = textBox4.Text;
+            int rowIndex = 0;
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals(searchValue))
+                {
+                    rowIndex = row.Index;
+                    break;
+                }
+            }
+            dataGridView2.Rows[rowIndex].Selected = true;
         }
     }
 }

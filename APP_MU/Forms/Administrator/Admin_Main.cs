@@ -46,12 +46,14 @@ namespace APP_MU.Forms.Administrator
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In Working");
+            Server_Settings server_Settings = new();
+            server_Settings.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In Working");
+            EventsEditor eventsEditor = new();
+            eventsEditor.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

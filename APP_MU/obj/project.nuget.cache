@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YkxdV9pubT7fR50JqciPgIC+Ac2pWbni6dEiG/KoWWvHbOoQep/IUZmG8UiAIxh35cNJsy67zbCHd7n/+Nv31g==",
+  "dgSpecHash": "Xhd72QRMY+7D2JOSgFP8MqGWhk53NLjfgfAXZtlxutzLlMdpH4dpUK1EQZSKeGtBwESIHF9cGWP6MIMk9bawlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maiki\\Desktop\\Cursos\\Friday_Mu\\APP_MU\\APP_MU.csproj",
+  "projectFilePath": "C:\\Users\\maiki\\Desktop\\Project\\Mu_Editor_Season16\\APP_MU\\APP_MU.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maiki\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\maiki\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

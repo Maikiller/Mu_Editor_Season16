@@ -255,6 +255,7 @@ namespace APP_MU.Forms.Administrator
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(148, 23);
             this.comboBox2.TabIndex = 22;
+            this.comboBox2.DropDownClosed += new System.EventHandler(this.comboBox2_DropDownClosed);
             // 
             // label9
             // 

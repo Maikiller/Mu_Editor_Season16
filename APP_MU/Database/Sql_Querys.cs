@@ -479,6 +479,7 @@ namespace APP_MU.Models
             "WHERE " +
             "world_template.name = '" + TeleportGateDestiy.worldName + "'";
 
+
         public string InsertDestinyGate =
             "INSERT INTO gate_template (flag, world, x1, y1, min_level, description, x2, y2, target_id, direction) " +
             "VALUES " +
@@ -489,7 +490,7 @@ namespace APP_MU.Models
         public string InsertPortalLocation =
             "INSERT INTO gate_template (flag, world, x1, y1, min_level, description, x2, y2, target_id, direction) " +
             "VALUES " +
-            "(" + TeleportGateDestiy.flag + ", " + TeleportGateDestiy.worldID + ", " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", 0, '" + TeleportGateDestiy.description + "', " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", " + PortalLocation.ID_Destiny + ", 0)";
+            "(" + PortalLocation.flag + ", " + PortalLocation.worldID + ", " + PortalLocation.x + ", " + PortalLocation.y + ", 0, '" + PortalLocation.description + "', " + PortalLocation.x + ", " + PortalLocation.y + ", " + PortalLocation.ID_Destiny + ", 0)";
         public string AllTeleportGates =
             "SELECT world_template.name," +
             "gate_template.id AS `ID Destiny`," +

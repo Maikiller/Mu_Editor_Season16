@@ -470,5 +470,37 @@ namespace APP_MU.Models
             "INSERT INTO event_manager " +
             "(server, event, invasion, duration, notify_time, hour, minute, day_of_week, day_of_month, season_event, exclusive_server)" +
             "VALUES(" + ManageEvents.ServerID + ", " + ManageEvents.eventID + ", " + ManageEvents.invasionID + ", " + ManageEvents.duration + ", " + ManageEvents.notify_time + ", " + ManageEvents.hour + ", " + ManageEvents.minute + ", " + ManageEvents.day_of_week + ", " + ManageEvents.day_of_month + ", " + ManageEvents.season_event + ", " + ManageEvents.exclusive_server + ")";
+
+        public string selectWorldEntryTeleport =
+           "SELECT " +
+            "world_template.entry " +
+            "FROM " +
+            "world_template " +
+            "WHERE " +
+            "world_template.name = '" + TeleportGateDestiy.worldName + "'";
+
+        public string InsertDestinyGate =
+            "INSERT INTO gate_template (flag, world, x1, y1, min_level, description, x2, y2, target_id, direction) " +
+            "VALUES " +
+            "(" + TeleportGateDestiy.flag + ", " + TeleportGateDestiy.worldID + ", " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", 0, '" + TeleportGateDestiy.description + "', " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", 0, 0)";
+        public string ReturnLastIDGate =
+            "SELECT MAX(id) FROM gate_template;";
+
+        public string InsertPortalLocation =
+            "INSERT INTO gate_template (flag, world, x1, y1, min_level, description, x2, y2, target_id, direction) " +
+            "VALUES " +
+            "(" + TeleportGateDestiy.flag + ", " + TeleportGateDestiy.worldID + ", " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", 0, '" + TeleportGateDestiy.description + "', " + TeleportGateDestiy.x + ", " + TeleportGateDestiy.y + ", " + PortalLocation.ID_Destiny + ", 0)";
+        public string AllTeleportGates =
+            "SELECT world_template.name," +
+            "gate_template.id AS `ID Destiny`," +
+            "gate_template.target_id AS `Portal ID`," +
+            "gate_template.description FROM world_template " +
+            "INNER JOIN " +
+            "gate_template " +
+            "ON " +
+            "world_template.entry = gate_template.world";
+
+        public string DeleteGates =
+            "DELETE FROM gate_template WHERE id = " + PortalLocation.ID_Destiny + "";
     }
 }

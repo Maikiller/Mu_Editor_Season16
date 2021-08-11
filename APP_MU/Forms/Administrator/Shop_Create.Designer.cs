@@ -714,6 +714,7 @@ namespace APP_MU.Forms.Administrator
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(766, 701);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.groupBox2);
@@ -744,7 +745,6 @@ namespace APP_MU.Forms.Administrator
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

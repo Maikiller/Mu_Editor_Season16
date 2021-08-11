@@ -86,5 +86,11 @@ namespace APP_MU.Forms.Administrator
             Shop_Create shop_Create = new();
             shop_Create.ShowDialog();
         }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            TeleportGateCreator teleportGateCreator = new();
+            teleportGateCreator.Show();
+        }
     }
 }

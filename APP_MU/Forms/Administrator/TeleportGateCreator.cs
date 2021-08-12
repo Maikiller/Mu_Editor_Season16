@@ -41,35 +41,40 @@ namespace APP_MU.Forms.Administrator
             LoadDates();
         }
 
-        private static void LoadWorldEntry()
+        private static void LoadWorldEntryDestiny()
         {
             Sql_Querys sql_Querys = new();
             if (Connect.loadData(sql_Querys.selectWorldEntryTeleport).Rows.Count >0)
             {
-                PortalLocation.worldID = int.Parse(Connect.loadData(sql_Querys.selectWorldEntryTeleport).Rows[0].ItemArray[0].ToString());
+                TeleportGateDestiy.worldID = int.Parse(Connect.loadData(sql_Querys.selectWorldEntryTeleport).Rows[0].ItemArray[0].ToString());
             }
             
+        }
+
+        private static void LoadWorldEntryPortal()
+        {
+            Sql_Querys sql_Querys = new();
+            if (Connect.loadData(sql_Querys.selectWorldEntryTeleport).Rows.Count > 0)
+            {
+                PortalLocation.worldID = int.Parse(Connect.loadData(sql_Querys.selectWorldEntryTeleportPortal).Rows[0].ItemArray[0].ToString());
+            }
+
         }
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
             TeleportGateDestiy.worldName = comboBox1.Text;
-            LoadWorldEntry();
+            LoadWorldEntryDestiny();
         }
 
         private void comboBox2_DropDownClosed(object sender, EventArgs e)
         {
-            TeleportGateDestiy.worldName = comboBox2.Text;
-            LoadWorldEntry();
+            PortalLocation.worldName = comboBox2.Text;
+            LoadWorldEntryPortal();
         }
 
 
         private void AddDestinyTeleport()
         {
-            if (comboBox1.Text == "Select World Destiny")
-            {
-                MessageBox.Show("Select World Destiny");
-                return;
-            }
             TeleportGateDestiy.x = Convert.ToInt32(numericUpDown1.Value);
             TeleportGateDestiy.y = Convert.ToInt32(numericUpDown2.Value);
             TeleportGateDestiy.description = textBox3.Text;

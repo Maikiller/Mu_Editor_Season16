@@ -480,6 +480,15 @@ namespace APP_MU.Models
             "world_template.name = '" + TeleportGateDestiy.worldName + "'";
 
 
+        public string selectWorldEntryTeleportPortal =
+           "SELECT " +
+            "world_template.entry " +
+            "FROM " +
+            "world_template " +
+            "WHERE " +
+            "world_template.name = '" + PortalLocation.worldName + "'";
+
+
         public string InsertDestinyGate =
             "INSERT INTO gate_template (flag, world, x1, y1, min_level, description, x2, y2, target_id, direction) " +
             "VALUES " +

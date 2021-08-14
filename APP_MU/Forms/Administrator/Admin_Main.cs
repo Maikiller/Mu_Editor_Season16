@@ -92,5 +92,11 @@ namespace APP_MU.Forms.Administrator
             TeleportGateCreator teleportGateCreator = new();
             teleportGateCreator.Show();
         }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            Monster monster = new();
+            monster.Show();
+        }
     }
 }

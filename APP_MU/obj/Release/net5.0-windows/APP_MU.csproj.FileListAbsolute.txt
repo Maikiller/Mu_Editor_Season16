@@ -75,3 +75,4 @@ C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Release\net5.0-wind
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Release\net5.0-windows\ref\APP_MU.dll
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Release\net5.0-windows\APP_MU.pdb
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Release\net5.0-windows\APP_MU.genruntimeconfig.cache
+C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Release\net5.0-windows\APP_MU.Forms.Administrator.Monster.resources

@@ -13,6 +13,9 @@
     <Compile Update="Forms\Administrator\EventsEditor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Administrator\Monster.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Administrator\NPC_Shop_Editor.cs">
       <SubType>Form</SubType>
     </Compile>

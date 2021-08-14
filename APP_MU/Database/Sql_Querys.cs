@@ -512,5 +512,131 @@ namespace APP_MU.Models
 
         public string DeleteGates =
             "DELETE FROM gate_template WHERE id = " + PortalLocation.ID_Destiny + "";
+
+
+        //Monster spot
+        public string LoadMonster =
+            "SELECT " +
+            "monster_template.name " +
+            "AS " +
+            "monster_name," +
+            "world_template.name " +
+            "AS " +
+            "world_name," +
+            "monster.x1," +
+            "monster.y1," +
+            "monster.x2," +
+            "monster.y2," +
+            "monster.spawn_delay as delay," +
+           "monster.spawn_distance as distance," +
+           "monster.respawn_time_min as time_min," +
+           "monster.respawn_time_max as time_max," +
+            "monster.respawn_id," +
+            "monster.move_distance," +
+            "monster.itembag," +
+            "monster.elemental_attribute," +
+            "monster.id," +
+            "monster.guid " +
+            "FROM " +
+            "monster " +
+            "INNER " +
+            "JOIN " +
+            "world_template " +
+            "ON " +
+            "monster.world = world_template.entry " +
+            "INNER JOIN " +
+            "monster_template " +
+            "ON " +
+            "monster.id = monster_template.id " +
+            "ORDER BY monster.id";
+
+        public string LoadMonster_findtoWorld =
+           "SELECT " +
+           "monster_template.name " +
+           "AS " +
+           "monster_name," +
+           "world_template.name " +
+           "AS " +
+           "world_name," +
+           "monster.x1," +
+           "monster.y1," +
+           "monster.x2," +
+           "monster.y2," +
+           "monster.spawn_delay as delay," +
+           "monster.spawn_distance as distance," +
+           "monster.respawn_time_min as time_min," +
+           "monster.respawn_time_max as time_max," +
+           "monster.respawn_id," +
+           "monster.move_distance," +
+           "monster.itembag," +
+           "monster.elemental_attribute, " +
+           "monster.id," +
+           "monster.guid " +
+           "FROM " +
+           "monster " +
+           "INNER " +
+           "JOIN " +
+           "world_template " +
+           "ON " +
+           "monster.world = world_template.entry " +
+           "INNER JOIN " +
+           "monster_template " +
+           "ON " +
+           "monster.id = monster_template.id " +
+            "WHERE world_template.name = '" + MonsterSpot.nameWorldFind + "' " +
+           "ORDER BY monster.id";
+
+        public string loadAllMonster =
+            "SELECT monster_template.name FROM monster_template";
+
+        public string nameMonster =
+            "SELECT monster_template.id " +
+            "FROM " +
+            "monster_template " +
+            "WHERE " +
+            "monster_template.name = '" + MonsterSpot.nameMonster + "'";
+
+        public string insertMonster =
+            "INSERT INTO monster " +
+            "(guid,server, id, world, x1, y1, x2, y2, direction, spawn_delay, spawn_distance, respawn_time_min, respawn_time_max, respawn_id, move_distance, elemental_attribute,itembag,disabled) " +
+            "VALUES (" + MonsterSpot.guid + "," + MonsterSpot.server + ", " + MonsterSpot.id + ", " +
+            "" + MonsterSpot.WorldID + ", " + MonsterSpot.x1 + ", " +
+            "" + MonsterSpot.y1 + ", " + MonsterSpot.x2 + ", " +
+            "" + MonsterSpot.y2 + ", " + MonsterSpot.direction + ", " +
+            "" + MonsterSpot.spawn_delay + ", " + MonsterSpot.spawn_distance + ", " +
+            "" + MonsterSpot.respawn_time_min + ", " + MonsterSpot.respawn_time_max + ", " +
+            "" + MonsterSpot.respawn_id + ", " + MonsterSpot.move_distance + ", " +
+            "" + MonsterSpot.elemental_attribute + ", DEFAULT, 0)";
+
+        public string lastInsertMonsterGUID =
+            "SELECT MAX(guid) FROM monster;";
+
+        public string deleteMonster =
+            "DELETE FROM monster WHERE guid = " + MonsterSpot.guid + " AND id = " + MonsterSpot.id + "";
+
+        public string loadMonsterPerGuidID =
+            "SELECT " +
+            "monster.guid," + //0
+            "monster.server," +//1
+            "monster.id," +//2
+            "monster.world," +//3
+            "monster.x1," +//4
+            "monster.y1," +//5
+            "monster.x2," +//6
+            "monster.y2," +//7
+            "monster.direction," +//8
+            "monster.spawn_delay," +//9
+            "monster.spawn_distance," +//10
+            "monster.respawn_time_min," +//11
+            "monster.respawn_time_max," +//12
+            "monster.respawn_id," +//13
+            "monster.move_distance," +//14
+            "monster.elemental_attribute," +//15
+            "monster.itembag," +//16
+            "monster.disabled " +//17
+            "FROM " +
+            "monster " +
+            "WHERE " +
+            "monster.guid = " + MonsterSpot.guid + " AND monster.id = " + MonsterSpot.id + "";
     }
 }

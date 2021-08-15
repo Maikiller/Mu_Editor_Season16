@@ -340,28 +340,28 @@ namespace APP_MU.Models
 
         public string load_custom_npc =
             "SELECT " +
-            "monster.server," + //0
-            "monster.guid," +//1
-            "monster.id," +//2
-            "monster.world," +//3
-            "monster.x1," +//4
-            "monster.y1," +//5
-            "monster.x2," +//6
-            "monster.y2," +//7
-            "monster.direction," +//8
-            "monster.spawn_delay," +//9
-            "monster.spawn_distance," +//10
-            "monster.respawn_time_min," +//11
-            "monster.respawn_time_max," +//12
-            "monster.respawn_id," +//13
-            "monster.move_distance," +//14
-            "monster.npc_function," +//15
-            "monster.elemental_attribute," +//16
-            "monster.disabled," +//17
-            "shop_template.max_pk_level," +//18
-            "shop_template.pk_text," +//19
-            "monster_template.name, " + //20
-            "shop_template.guid " + //21
+            "monster.server," +
+            "monster.guid," +
+            "monster.id," +
+            "monster.world," +
+            "monster.x1," +
+            "monster.y1," +
+            "monster.x2," +
+            "monster.y2," +
+            "monster.direction," +
+            "monster.spawn_delay," +
+            "monster.spawn_distance," +
+            "monster.respawn_time_min," +
+            "monster.respawn_time_max," +
+            "monster.respawn_id," +
+            "monster.move_distance," +
+            "monster.npc_function," +
+            "monster.elemental_attribute," +
+            "monster.disabled," +
+            "shop_template.max_pk_level," +
+            "shop_template.pk_text," +
+            "monster_template.name, " +
+            "shop_template.guid " +
             "FROM " +
             "monster " +
             "INNER JOIN " +
@@ -401,10 +401,17 @@ namespace APP_MU.Models
             "UPDATE " +
             "shop_template " +
             "SET " +
+            "name = " + NpcShop.npc_name + ", " +
             "pk_text = '" + NpcShop.pk_text + "', " +
             "max_pk_level =  " + NpcShop.pk_count + "  " +
             "where  " +
             "name = '" + NpcShop.npc_name + "';";
+
+        public string last_npc_guid =
+        "SELECT MAX(guid) FROM shop_template";
+        public string last_monster_guid =
+            "SELECT MAX(guid) FROM monster";
+
 
         public string load_server_settings =
             "SELECT settings.`key`,settings.value " +
@@ -616,24 +623,24 @@ namespace APP_MU.Models
 
         public string loadMonsterPerGuidID =
             "SELECT " +
-            "monster.guid," + //0
-            "monster.server," +//1
-            "monster.id," +//2
-            "monster.world," +//3
-            "monster.x1," +//4
-            "monster.y1," +//5
-            "monster.x2," +//6
-            "monster.y2," +//7
-            "monster.direction," +//8
-            "monster.spawn_delay," +//9
-            "monster.spawn_distance," +//10
-            "monster.respawn_time_min," +//11
-            "monster.respawn_time_max," +//12
-            "monster.respawn_id," +//13
-            "monster.move_distance," +//14
-            "monster.elemental_attribute," +//15
-            "monster.itembag," +//16
-            "monster.disabled " +//17
+            "monster.guid," +
+            "monster.server," +
+            "monster.id," +
+            "monster.world," +
+            "monster.x1," +
+            "monster.y1," +
+            "monster.x2," +
+            "monster.y2," +
+            "monster.direction," +
+            "monster.spawn_delay," +
+            "monster.spawn_distance," +
+            "monster.respawn_time_min," +
+            "monster.respawn_time_max," +
+            "monster.respawn_id," +
+            "monster.move_distance," +
+            "monster.elemental_attribute," +
+            "monster.itembag," +
+            "monster.disabled " +
             "FROM " +
             "monster " +
             "WHERE " +

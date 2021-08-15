@@ -62,7 +62,6 @@ namespace APP_MU.Forms.Administrator
 
         public void ClearInputs()
         {
-            numericUpDown1.Value = 0;
             numericUpDown2.Value = 0;
             numericUpDown3.Value = 0;
             numericUpDown4.Value = 0;
@@ -76,7 +75,6 @@ namespace APP_MU.Forms.Administrator
             numericUpDown12.Value = 0;
             numericUpDown13.Value = 0;
             numericUpDown14.Value = 0;
-            numericUpDown15.Value = 0;
             textBox1.Text = "0";
             textBox2.Text = "";
             textBox8.Text = "";
@@ -86,10 +84,11 @@ namespace APP_MU.Forms.Administrator
 
         public void InsertInputs()
         {
+            Sql_Querys sql_Querys = new();
             //Insert Monster Table
             NpcShop.disabled = 0;
             NpcShop.server = int.Parse(textBox1.Text);
-            NpcShop.id = Convert.ToInt32(numericUpDown1.Value);
+            NpcShop.id = int.Parse(Connect.loadData(sql_Querys.last_monster_guid).Rows[0].ItemArray[0].ToString()) + 1; //monster guid
             NpcShop.x1 = Convert.ToInt32(numericUpDown9.Value);
             NpcShop.y1 = Convert.ToInt32(numericUpDown10.Value);
             NpcShop.x2 = Convert.ToInt32(numericUpDown11.Value);
@@ -104,7 +103,7 @@ namespace APP_MU.Forms.Administrator
             NpcShop.elemental_attribute = Convert.ToInt32(numericUpDown8.Value);
 
             //Insert Shop_template Table
-            NpcShop.guidCustomNPC = Convert.ToInt32(numericUpDown15.Value);
+            NpcShop.guidCustomNPC = int.Parse(Connect.loadData(sql_Querys.last_npc_guid).Rows[0].ItemArray[0].ToString()) + 1; //shop_template guid
             NpcShop.npc_name = textBox8.Text;
             NpcShop.pk_count = Convert.ToInt32(numericUpDown14.Value);
             NpcShop.pk_text = textBox2.Text;
@@ -118,39 +117,13 @@ namespace APP_MU.Forms.Administrator
         public void SaveNPC()
         {
             InsertInputs();
-
-
             Sql_Querys sql_Querys = new();
 
-            if (Connect.loadData(sql_Querys.load_custom_npc).Rows.Count > 0)
-            {
+            Connect.update(sql_Querys.insertNPC);
+            Connect.update(sql_Querys.insertShop);
+            MessageBox.Show("NPC Custom Create");
+            dataGridView1.DataSource = Connect.loadData(sql_Querys.select_npc);
 
-
-                if (Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[15].ToString() == textBox8.Text)
-                {
-                    MessageBox.Show(textBox8.Text + " already exists");
-                }
-            }
-            else
-            {
-                if (Connect.loadData(sql_Querys.verifierID).Rows.Count > 0)
-                {
-                    if (Connect.loadData(sql_Querys.verifierID).Rows[0].ItemArray[0].ToString() == NpcShop.id.ToString())
-                        MessageBox.Show("This ID_Monster " + NpcShop.id + " is already in use. Recommended ID: 11000K upwards;");
-                }
-                else if (Connect.loadData(sql_Querys.verifierIDShop).Rows.Count > 0)
-                {
-                    if (Connect.loadData(sql_Querys.verifierIDShop).Rows[0].ItemArray[0].ToString() == NpcShop.guidCustomNPC.ToString())
-                        MessageBox.Show("This ID_SHOP " + NpcShop.guidCustomNPC + " is already in use. Recommended ID: 240K upwards;");
-                }
-                else
-                {
-                    Connect.update(sql_Querys.insertNPC);
-                    Connect.update(sql_Querys.insertShop);
-                    MessageBox.Show("NPC Custom Create");
-                    dataGridView1.DataSource = Connect.loadData(sql_Querys.select_npc);
-                }
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -204,7 +177,6 @@ namespace APP_MU.Forms.Administrator
 
             if (Connect.loadData(sql_Querys.load_custom_npc).Rows.Count > 0)
             {
-                numericUpDown1.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[1].ToString());
                 numericUpDown2.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[9].ToString());
                 numericUpDown3.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[10].ToString());
                 numericUpDown4.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[11].ToString());
@@ -218,7 +190,6 @@ namespace APP_MU.Forms.Administrator
                 numericUpDown12.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[7].ToString());
                 numericUpDown13.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[8].ToString());
                 numericUpDown14.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[18].ToString());
-                numericUpDown15.Value = Convert.ToDecimal(Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[21].ToString());
                 textBox1.Text = Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[0].ToString();
                 textBox2.Text = Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[19].ToString();
                 textBox8.Text = Connect.loadData(sql_Querys.load_custom_npc).Rows[0].ItemArray[15].ToString();

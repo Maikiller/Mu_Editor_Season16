@@ -55,7 +55,7 @@ namespace APP_MU.Forms.Administrator
             }
             catch
             {
-                MessageBox.Show("Add column [guid] auto-increment in mu_game.column");
+                MessageBox.Show("Add column [guid] auto-increment in mu_game.shop_items");
             }
 
 

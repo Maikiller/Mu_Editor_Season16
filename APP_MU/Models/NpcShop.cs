@@ -8,7 +8,7 @@ namespace APP_MU.Models
 {
     internal class NpcShop
     {
-        public static int durability_quanty; //response of find item duplicate from database  *dont remove
+        public static int durability_quanty;
 
         //npc
 

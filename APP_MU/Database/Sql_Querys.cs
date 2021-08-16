@@ -645,5 +645,27 @@ namespace APP_MU.Models
             "monster " +
             "WHERE " +
             "monster.guid = " + MonsterSpot.guid + " AND monster.id = " + MonsterSpot.id + "";
+
+        public string loadGuildList =
+            "SELECT guild_list.guid," +
+            "guild_list.name," +
+            "guild_list.emblem," +
+            "guild_list.hostil," +
+            "guild_list.alliance," +
+            "guild_list.notice," +
+            "guild_list.score " +
+            "FROM " +
+            "guild_list";
+
+        public string loadGuildMembers =
+            "SELECT " +
+            "character_info.name,character_info.online," +
+            "guild_members.ranking " +
+            "FROM " +
+            "character_info " +
+            "INNER JOIN " +
+            "guild_members ON character_info.guid = guild_members.char_id INNER JOIN guild_list ON guild_members.guild_id = guild_list.guid " +
+            "WHERE " +
+            "guild_list.guid = " + GuildManage.idGuild + "";
     }
 }

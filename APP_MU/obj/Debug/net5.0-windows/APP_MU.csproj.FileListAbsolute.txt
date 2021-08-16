@@ -76,3 +76,4 @@ C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Debug\net5.0-window
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Debug\net5.0-windows\APP_MU.Forms.Administrator.TeleportGateCreator.resources
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Debug\net5.0-windows\APP_MU.Forms.Administrator.EventsEditor.resources
 C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Debug\net5.0-windows\APP_MU.Forms.Administrator.Monster.resources
+C:\Users\maiki\Desktop\Project\Mu_Editor_Season16\APP_MU\obj\Debug\net5.0-windows\APP_MU.Forms.Administrator.Guild.resources

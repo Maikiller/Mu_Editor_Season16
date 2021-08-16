@@ -58,7 +58,8 @@ namespace APP_MU.Forms.Administrator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In Working");
+            Guild guild = new();
+            guild.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

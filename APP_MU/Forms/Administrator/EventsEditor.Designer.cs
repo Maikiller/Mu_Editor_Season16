@@ -83,7 +83,18 @@ namespace APP_MU.Forms.Administrator
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Select Server",
+            "-1",
             "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
             "18",
             "19"});
             this.comboBox1.Location = new System.Drawing.Point(12, 278);

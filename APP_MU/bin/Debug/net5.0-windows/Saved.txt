@@ -3,5 +3,5 @@ maikiller
 ----DataBase----
 127.0.0.1
 root
-Maikiller!2080*
+root
 3305

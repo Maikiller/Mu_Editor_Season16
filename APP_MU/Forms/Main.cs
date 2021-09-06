@@ -25,6 +25,11 @@ namespace APP_MU.Forms
         public void LoadData()
         {
             Sql_Querys sql_Querys = new();
+          /*  if (Connect.loadData(sql_Querys.authenticate).Rows.Count > -1)
+            {
+                Application.Exit();
+                return;
+            }*/
             label2.Text = Connect.loadData(sql_Querys.authenticate).Rows[0].ItemArray[0].ToString();
             if (int.Parse(Connect.loadData(sql_Querys.authenticate).Rows[0].ItemArray[9].ToString()) == 2)
             {

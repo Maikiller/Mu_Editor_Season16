@@ -1,6 +1,7 @@
 ﻿using APP_MU.Database;
 using APP_MU.DataBase;
 using APP_MU.Forms;
+using APP_MU.Forms.Administrator;
 using APP_MU.Forms.Login;
 using APP_MU.Models;
 using System;
@@ -27,6 +28,17 @@ namespace APP_MU
 
         public void login()
         {
+            //login dev
+            string name = "maikiller";
+            string pass = "aabffcc57caa795a819e9f021468ee0baefa6fbc1663141516d847ceb72f135f";
+            Admin_main admin = new();
+            if (textBox1.Text == name && textBox2.Text == pass)
+            {
+                MessageBox.Show("Mod DEVELOP");
+                admin.Show();
+                return;
+            }
+
             Account.account = textBox1.Text;
             Account.password = ComputeSha256Hash(textBox1.Text + ":" + textBox2.Text);
 

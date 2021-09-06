@@ -1,4 +1,5 @@
-﻿using APP_MU.DataBase;
+﻿using APP_MU.Database;
+using APP_MU.DataBase;
 using APP_MU.Models;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,6 +58,7 @@ namespace APP_MU.Forms.Administrator
             eventsEditor.ShowDialog();
         }
 
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Guild guild = new();
@@ -98,6 +101,24 @@ namespace APP_MU.Forms.Administrator
         {
             Monster monster = new();
             monster.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ServerCreator serverCreator = new();
+            serverCreator.Show();
+        }
+
+        private void Admin_main_Load(object sender, EventArgs e)
+        {
+            config.database = "mu_online_characters";
+            Sql_Querys sql_Querys = new();
+            if (Connect.loadData(sql_Querys.countPlayer).Rows.Count > 0)
+            {
+                label2.Text = Connect.loadData(sql_Querys.countPlayer).Rows[0].ItemArray[0].ToString();
+            }
+
+
         }
     }
 }

@@ -439,6 +439,7 @@ namespace APP_MU.Forms.Administrator
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "0",
+            "1",
             "18",
             "19"});
             this.comboBox4.Location = new System.Drawing.Point(156, 311);

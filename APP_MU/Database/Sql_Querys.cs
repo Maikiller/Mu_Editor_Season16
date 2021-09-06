@@ -667,5 +667,30 @@ namespace APP_MU.Models
             "guild_members ON character_info.guid = guild_members.char_id INNER JOIN guild_list ON guild_members.guild_id = guild_list.guid " +
             "WHERE " +
             "guild_list.guid = " + GuildManage.idGuild + "";
+        public string loadAllServerList =
+            "SELECT " +
+            "server_list.server," +
+            "server_list.code," +
+            "server_list.name," +
+            "server_list.port," +
+            "server_list.ip," +
+            "server_list.flag," +
+            "server_list.online," +
+            "server_list.default_world," +
+            "server_list.default_x," +
+            "server_list.default_y," +
+            "server_list.type " +
+            "FROM " +
+            "server_list";
+        public string addServer =
+            "INSERT INTO server_list " +
+            "(server, code, name, port, ip, flag, online, default_world, default_x, default_y, type) " +
+            "VALUES " +
+            "(" + CreaterServer.server + ", " + CreaterServer.code + ", '" + CreaterServer.name + "', " + CreaterServer.port + ", '" + CreaterServer.ip + "', " + CreaterServer.flag + ", 0 , " + CreaterServer.default_world + ", " + CreaterServer.default_x + ", " + CreaterServer.default_y + ", " + CreaterServer.type + ")";
+        public string countPlayer =
+            "SELECT COUNT(character_info.online) AS Online " +
+            "FROM " +
+            "character_info WHERE character_info.online = 1";
+
     }
 }

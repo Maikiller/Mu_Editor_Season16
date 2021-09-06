@@ -111,7 +111,6 @@ namespace APP_MU
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(225, 23);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "maikiller10";
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // label4

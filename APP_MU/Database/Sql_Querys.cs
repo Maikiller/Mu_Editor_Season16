@@ -694,7 +694,7 @@ namespace APP_MU.Models
 
         public string loadAllMinimap =
             "SELECT " +
-            //"mini_map.world," +
+            "mini_map.world," +
             //"world_template.name," +
             "mini_map.`index`," +
             "mini_map.`group`," +
@@ -727,6 +727,43 @@ namespace APP_MU.Models
             "mini_map " +
             "(world, `index`, `group`, type, x, y, text, server) " +
             "VALUES " +
-            "("+MiniMap.WorldEntry+ ", " + MiniMap.index+ ", " + MiniMap.group+ ", " + MiniMap.type+ ", " + MiniMap.x+ ", " + MiniMap.y+ ", '" + MiniMap.text+ "', " + MiniMap.Server+ ")";
+            "(" + MiniMap.WorldEntry + ", " + MiniMap.index + ", " + MiniMap.group + ", " + MiniMap.type + ", " + MiniMap.x + ", " + MiniMap.y + ", '" + MiniMap.text + "', " + MiniMap.Server + ")";
+
+        public string LastIndexMiniMap =
+            "SELECT " +
+            "MAX(`index`) " +
+            "FROM " +
+            "mini_map " +
+            "INNER " +
+            "JOIN " +
+            "world_template " +
+            "ON " +
+            "mini_map.world = world_template.entry " +
+            "WHERE " +
+            "mini_map.server = " + MiniMap.Server + " " +
+            "AND " +
+            "world_template.name = '" + MiniMap.MapName + "'";
+
+        public string DeleteMiniMap =
+            "DELETE FROM " +
+            "mini_map " +
+            "WHERE " +
+            "server = " + MiniMap.Server + " " +
+            "AND " +
+            "`index` = " + MiniMap.index + "";
+
+        public string UpdateMiniMap =
+            "UPDATE " +
+            "mini_map " +
+            "SET " +
+            "`group` = "+MiniMap.group+"," +
+            "type = " + MiniMap.type+ "," +
+            "x = " + MiniMap.x+ "," +
+            "y = " + MiniMap.y+ "," +
+            "text = '" + MiniMap.text+ "' " +
+            "WHERE world = " + MiniMap.WorldEntry + " " +
+            "AND " +
+            "server = " + MiniMap.Server + " " +
+            "AND `index` = " + MiniMap.index + "";
     }
 }

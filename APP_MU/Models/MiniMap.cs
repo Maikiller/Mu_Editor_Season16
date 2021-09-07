@@ -13,7 +13,6 @@ namespace APP_MU.Models
         public static string WorldEntry;
 
 
-        public static int world;
         public static int index;
         public static int group;
         public static int type;

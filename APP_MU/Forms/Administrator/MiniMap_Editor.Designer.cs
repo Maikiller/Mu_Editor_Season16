@@ -35,8 +35,6 @@ namespace APP_MU.Forms.Administrator
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +48,6 @@ namespace APP_MU.Forms.Administrator
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +71,7 @@ namespace APP_MU.Forms.Administrator
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(551, 154);
             this.dataGridView2.TabIndex = 6;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             // 
             // button3
             // 
@@ -82,7 +80,7 @@ namespace APP_MU.Forms.Administrator
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(216, 330);
+            this.button3.Location = new System.Drawing.Point(240, 333);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(177, 27);
             this.button3.TabIndex = 45;
@@ -103,6 +101,7 @@ namespace APP_MU.Forms.Administrator
             this.button2.TabIndex = 44;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -120,37 +119,13 @@ namespace APP_MU.Forms.Administrator
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(74, 330);
+            this.button1.Location = new System.Drawing.Point(98, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 27);
             this.button1.TabIndex = 47;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(74, 235);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(77, 23);
-            this.numericUpDown1.TabIndex = 49;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(74, 216);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Group";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -158,7 +133,7 @@ namespace APP_MU.Forms.Administrator
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(323, 212);
+            this.label3.Location = new System.Drawing.Point(264, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 15);
             this.label3.TabIndex = 56;
@@ -173,15 +148,18 @@ namespace APP_MU.Forms.Administrator
             this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox2.Location = new System.Drawing.Point(323, 233);
+            "Doors",
+            "Spot",
+            "Quote",
+            "Miner",
+            "Potion",
+            "Lock",
+            "Icon ???"});
+            this.comboBox2.Location = new System.Drawing.Point(264, 236);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(77, 23);
             this.comboBox2.TabIndex = 59;
+            this.comboBox2.DropDownClosed += new System.EventHandler(this.comboBox2_DropDownClosed);
             // 
             // label4
             // 
@@ -189,7 +167,7 @@ namespace APP_MU.Forms.Administrator
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(240, 216);
+            this.label4.Location = new System.Drawing.Point(181, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 15);
             this.label4.TabIndex = 63;
@@ -201,7 +179,7 @@ namespace APP_MU.Forms.Administrator
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(157, 216);
+            this.label7.Location = new System.Drawing.Point(98, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 15);
             this.label7.TabIndex = 62;
@@ -210,7 +188,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown4
             // 
             this.numericUpDown4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown4.Location = new System.Drawing.Point(157, 234);
+            this.numericUpDown4.Location = new System.Drawing.Point(98, 237);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -223,7 +201,7 @@ namespace APP_MU.Forms.Administrator
             // numericUpDown7
             // 
             this.numericUpDown7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown7.Location = new System.Drawing.Point(240, 234);
+            this.numericUpDown7.Location = new System.Drawing.Point(181, 237);
             this.numericUpDown7.Maximum = new decimal(new int[] {
             255,
             0,
@@ -236,7 +214,7 @@ namespace APP_MU.Forms.Administrator
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(74, 288);
+            this.textBox7.Location = new System.Drawing.Point(98, 291);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(132, 33);
@@ -248,7 +226,7 @@ namespace APP_MU.Forms.Administrator
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(74, 270);
+            this.label8.Location = new System.Drawing.Point(98, 273);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 65;
@@ -367,8 +345,6 @@ namespace APP_MU.Forms.Administrator
             this.Controls.Add(this.numericUpDown7);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -383,7 +359,6 @@ namespace APP_MU.Forms.Administrator
             this.Text = "MiniMap";
             this.Load += new System.EventHandler(this.MiniMap_Editor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             this.ResumeLayout(false);

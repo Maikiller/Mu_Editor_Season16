@@ -27,4 +27,13 @@ There are some that are just empty buttons.
 However, they will be worked on in the future.
 
 ![alt text](https://i.ibb.co/znDrW6H/login.png)
+
+![alt text](https://i.ibb.co/8BWKWCL/Sem-t-tulo.png)
+
 ![alt text](https://i.ibb.co/C5T62yt/main5.png)
+
+![alt text](https://i.ibb.co/Yh8nVJp/Sem-t-tulo.png)
+
+![alt text](https://i.ibb.co/jyRp6yh/Sem-t-tulo1.png)
+
+![alt text](https://i.ibb.co/5WtY5zh/Sem-t-tulo2.png)

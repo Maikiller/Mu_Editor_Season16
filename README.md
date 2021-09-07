@@ -25,8 +25,6 @@ add column [guid] as data type INT() Auto Increment.
 
 There are some that are just empty buttons.
 However, they will be worked on in the future.
-
-![alt text](https://i.ibb.co/8BWKWCL/Sem-t-tulo.png)
-
 ![alt text](https://i.ibb.co/znDrW6H/login.png)
+![alt text](https://i.ibb.co/8BWKWCL/Sem-t-tulo.png)
 ![alt text](https://i.ibb.co/C5T62yt/main5.png)

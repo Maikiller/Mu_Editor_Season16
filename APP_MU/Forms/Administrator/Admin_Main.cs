@@ -58,7 +58,7 @@ namespace APP_MU.Forms.Administrator
             eventsEditor.ShowDialog();
         }
 
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             Guild guild = new();
@@ -119,6 +119,12 @@ namespace APP_MU.Forms.Administrator
             }
 
 
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            MiniMap_Editor miniMap_Editor = new();
+            miniMap_Editor.Show();
         }
     }
 }

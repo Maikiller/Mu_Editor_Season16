@@ -28,9 +28,9 @@ namespace APP_MU
 
         public void login()
         {
-            //login dev
-            string name = "maikiller";
-            string pass = "aabffcc57caa795a819e9f021468ee0baefa6fbc1663141516d847ceb72f135f";
+            //login dev local
+            string name = "admin";
+            string pass = "local";
             Admin_main admin = new();
             if (textBox1.Text == name && textBox2.Text == pass)
             {

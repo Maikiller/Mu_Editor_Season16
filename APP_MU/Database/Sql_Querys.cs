@@ -692,5 +692,41 @@ namespace APP_MU.Models
             "FROM " +
             "character_info WHERE character_info.online = 1";
 
+        public string loadAllMinimap =
+            "SELECT " +
+            //"mini_map.world," +
+            //"world_template.name," +
+            "mini_map.`index`," +
+            "mini_map.`group`," +
+            "mini_map.type," +
+            "mini_map.x," +
+            "mini_map.y," +
+            "mini_map.text," +
+            "mini_map.server " +
+            "FROM mini_map " +
+            "INNER JOIN " +
+            "world_template " +
+            "ON " +
+            "mini_map.world = world_template.entry " +
+            "WHERE " +
+            "mini_map.server = " + MiniMap.Server + " " +
+            "AND " +
+            "world_template.name = '" + MiniMap.MapName + "'";
+
+        public string IDServerList =
+            "SELECT " +
+            "server_list.server " +
+            "FROM " +
+            "server_list";
+
+        public string FindWorldEntry =
+          "SELECT world_template.entry FROM world_template WHERE world_template.name = '" + MiniMap.MapName + "'";
+
+        public string SaveMiniMap =
+            "INSERT INTO " +
+            "mini_map " +
+            "(world, `index`, `group`, type, x, y, text, server) " +
+            "VALUES " +
+            "("+MiniMap.WorldEntry+ ", " + MiniMap.index+ ", " + MiniMap.group+ ", " + MiniMap.type+ ", " + MiniMap.x+ ", " + MiniMap.y+ ", '" + MiniMap.text+ "', " + MiniMap.Server+ ")";
     }
 }

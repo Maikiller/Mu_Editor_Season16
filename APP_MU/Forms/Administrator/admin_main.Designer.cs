@@ -44,6 +44,7 @@ namespace APP_MU.Forms.Administrator
             this.button12 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -150,9 +151,9 @@ namespace APP_MU.Forms.Administrator
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(12, 96);
+            this.button7.Location = new System.Drawing.Point(168, 95);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 35);
+            this.button7.Size = new System.Drawing.Size(163, 35);
             this.button7.TabIndex = 5;
             this.button7.Text = "Server Settings";
             this.button7.UseVisualStyleBackColor = false;
@@ -230,7 +231,7 @@ namespace APP_MU.Forms.Administrator
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button12.ForeColor = System.Drawing.SystemColors.Window;
-            this.button12.Location = new System.Drawing.Point(168, 96);
+            this.button12.Location = new System.Drawing.Point(337, 95);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(163, 35);
             this.button12.TabIndex = 12;
@@ -262,12 +263,29 @@ namespace APP_MU.Forms.Administrator
             this.label2.TabIndex = 14;
             this.label2.Text = "---";
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(80)))), ((int)(((byte)(154)))));
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button13.ForeColor = System.Drawing.SystemColors.Window;
+            this.button13.Location = new System.Drawing.Point(12, 96);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(150, 35);
+            this.button13.TabIndex = 15;
+            this.button13.Text = "Mini Map Editor";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // Admin_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(682, 279);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button12);
@@ -311,5 +329,6 @@ namespace APP_MU.Forms.Administrator
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button13;
     }
 }
